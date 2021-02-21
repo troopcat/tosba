@@ -1,28 +1,28 @@
 start: instruction+
 
 instruction:  MOVEMENT NUMBER -> movement
-		   | /#.*\n/ -> comment
+	   | /#.*\n/ -> comment
            | "renk" DEF ["," DEF] -> change_color
            | "doldur" code_block -> fill
            | "tekrarla" NUMBER code_block -> repeat
-		   | "bekle" NUMBER -> tsleep
-		   | "arka plan" DEF -> backg
-		   | "kaldır" -> tup
-		   | "indir" -> tdown
-		   | "hız" NUMBER -> tspeed
-		   | "sıfırla" -> treset
-		   | "temizle" -> sclear
-		   | "kalınlık" NUMBER -> tsize
-		   | "başlık" STRING -> stitle
-		   | "pencere" PNUMBER "," PNUMBER -> sresize
-		   | "şekil" DEF -> tshape
-		   | "ev" -> thome
-		   | "git" NUMBER "," NUMBER -> tgoto
-		   | "otomatik şekillendir" -> tauto
-		   | "çember" PNUMBER -> tcircle
-		   | "damga" -> tstamp
-		   | "damgaları temizle" -> tclearstamps
-		   | "çıkış" -> end
+	   | "bekle" NUMBER -> tsleep
+	   | "arka plan" DEF -> backg
+	   | "kaldır" -> tup
+	   | "indir" -> tdown
+	   | "hız" NUMBER -> tspeed
+	   | "sıfırla" -> treset
+	   | "temizle" -> sclear
+	   | "kalınlık" NUMBER -> tsize
+	   | "başlık" STRING -> stitle
+	   | "pencere" PNUMBER "," PNUMBER -> sresize
+	   | "şekil" DEF -> tshape
+	   | "ev" -> thome
+	   | "git" NUMBER "," NUMBER -> tgoto
+	   | "otomatik şekillendir" -> tauto
+	   | "çember" PNUMBER -> tcircle
+	   | "damga" -> tstamp
+	   | "damgaları temizle" -> tclearstamps
+	   | "çıkış" -> end
 		   
 		
 MOVEMENT: ( "ileri" | "geri" | "sol" | "sağ" )
