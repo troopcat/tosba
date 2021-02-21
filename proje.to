@@ -1,0 +1,85 @@
+# Tosba
+
+başlık "Tosba Programlama Dili"
+pencere 1000, 650
+arka plan gri
+otomatik şekillendir
+
+renk kırmızı, sarı
+hız 0
+
+doldur {
+	tekrarla 36 {
+		ileri 200
+		sol 170
+	}
+}
+
+bekle 5
+temizle
+
+ev
+
+kalınlık 5
+renk siyah, siyah
+
+doldur {
+	ileri 200
+	sağ 90
+	ileri 300
+	sağ 90
+	ileri 200
+	sağ 90
+	ileri 300
+}
+
+
+
+renk yeşil, yeşil
+
+kaldır
+sağ 90
+ileri 125
+sağ 90
+ileri 100
+
+indir
+
+doldur { çember 25 }
+
+renk sarı, sarı
+
+kaldır
+ileri 100
+indir
+
+doldur { çember 25 }
+
+bekle 5
+sıfırla
+
+git 10, 10
+şekil çember
+tekrarla 2 {
+	kaldır
+	ileri 100
+	indir
+	damga
+}
+
+kalınlık 1
+
+kaldır
+sol 90
+ileri 75
+indir
+
+tekrarla 180 {
+	ileri 1
+	sol 1
+}
+
+bekle 5
+damgaları temizle
+bekle 2
+çıkış
