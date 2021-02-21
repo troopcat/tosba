@@ -1,0 +1,101 @@
+# Tosba programlama diline hoş geldin
+# Bu rehber sana tosba programlama dilini nasıl kullanıcağını anlatacak
+
+# Ayrıca cümlelerin başına # şeklini koyarak yorum satırı yapabilirsin
+
+##########################
+#### 1. Bölüm Hareket ####
+##########################
+
+# Bu programlama dili öğrenmesi kolay olması için her şey Türkçe yazıldı
+
+# Aşağıdaki komut tosbağımızı 100 adım(pixel) ilerletecektir
+ileri 100
+
+# Bu komut ise tosbağı 90 derece sağa döndürecektir
+sağ 90
+
+# Tosbağı sola 180 derece döndürecektir
+sol 180
+
+# Tosbağı 50 adım(pixel) geri götürecektir
+geri 50
+
+# Haraket komutları bu kadardı artık daha gelişmiş kısma girebiliriz
+
+########################
+#### 2. Bölüm Kalem ####
+########################
+
+# Çizimin rengini kırmızı, kalemin rengini mavi yapar
+renk kırmızı, mavi
+
+# kalemi kaldırır
+kaldır
+
+# kalemi indirir
+indir
+
+# kalemin hızını belirler
+hız 0
+
+# kalemi sıfırlar
+sıfırla
+
+# kalemin şeklini değiştirir
+şekil kare
+
+# x: 0, y:0 konumuna götürür
+ev
+
+# verilen x ve y ile haraket eder
+git 5, 10
+
+# kalemin kalınlığını belirler
+kalınlık 5
+
+# kalemin büyüklüğü kalınlığına doğru orantılı bir şekilde düzenler
+otomatik şekillendir
+
+# verilen yarıçap ile çember çizer
+çember 300
+
+# damga bırakır
+damga
+
+# ekrandaki tüm damgaları temizler
+damgaları temizle
+
+# çizilenlerin içini doldurur
+doldur {
+    çember 30
+}
+
+##################################
+#### 3. Bölüm Ekran & Pencere ####
+##################################
+
+# verilen renge göre arka planı değiştirir
+arka plan sarı
+
+# ekrandaki her şeyi temizler
+temizle
+
+# başlığı verilen stringe göre değiştirir
+başlık "tosba programlama dili"
+
+# pencereyi şekillendirir
+pencere 300, 300
+
+# programı sonlandırır
+çıkış
+
+###########################
+#### 4. Bölüm Döngüler ####
+###########################
+
+# verilen sayı kadar içindeki kodu döndürür
+tekrarla 4 {
+    ileri 200
+    sağ 90
+}

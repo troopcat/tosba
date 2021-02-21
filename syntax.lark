@@ -1,0 +1,38 @@
+start: instruction+
+
+instruction:  MOVEMENT NUMBER -> movement
+		   | /#.*\n/ -> comment
+           | "renk" DEF ["," DEF] -> change_color
+           | "doldur" code_block -> fill
+           | "tekrarla" NUMBER code_block -> repeat
+		   | "bekle" NUMBER -> tsleep
+		   | "arka plan" DEF -> backg
+		   | "kaldır" -> tup
+		   | "indir" -> tdown
+		   | "hız" NUMBER -> tspeed
+		   | "sıfırla" -> treset
+		   | "temizle" -> sclear
+		   | "kalınlık" NUMBER -> tsize
+		   | "başlık" STRING -> stitle
+		   | "pencere" PNUMBER "," PNUMBER -> sresize
+		   | "şekil" DEF -> tshape
+		   | "ev" -> thome
+		   | "git" NUMBER "," NUMBER -> tgoto
+		   | "otomatik şekillendir" -> tauto
+		   | "çember" PNUMBER -> tcircle
+		   | "damga" -> tstamp
+		   | "damgaları temizle" -> tclearstamps
+		   | "çıkış" -> end
+		   
+		
+MOVEMENT: ( "ileri" | "geri" | "sol" | "sağ" )
+
+code_block: "{" instruction+ "}"
+
+DEF: ("a" | "b" | "c" | "ç" | "d" | "e" | "f" | "g" | "ğ" | "h" | "ı" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "ö" | "p" | "r" | "s" | "ş" | "t" | "u" | "ü" | "v" | "y" | "z" | "x" | "q" | "_" | "A" | "B" | "C" | "Ç" | "D" | "E" | "F" |"G" | "Ğ" | "H" | "I" | "İ" | "J" | "K" | "L" | "M" | "N" | "O" | "Ö" | "P" | "R" | "S" | "Ş" | "T" | "U" | "Ü" | "V" | "Y" | "Z" | "X" | "Q" | " ")+
+
+%import common.ESCAPED_STRING -> STRING
+%import common.INT -> PNUMBER
+%import common.SIGNED_NUMBER -> NUMBER
+%import common.WS
+%ignore WS
